@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ARMADA</title>
+  <meta name="color-scheme" content="light dark" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="Media/Logos/Icon.png" />
+</head>
+<body>
+  <!-- Sticky translucent header -->
+  <header class="site-header" data-scrolled="false">
+    <div class="nav">
+      <!-- Логотип -->
+     <a class="nav__logo" href="#" aria-label="Главная">
+      <img src="Media/Logos/Logo_armada.svg" alt="Логотип Armada" />
+      </a>
+
+      <!-- Основная навигация -->
+      <nav class="nav__links">
+        <!-- Магазин с выпадающим -->
+        <div class="nav__item">
+          <button class="nav__link">Магазин</button>
+          <div class="dropdown">
+            <a href="#">Световые буквы</a>
+            <a href="#">Лайтбоксы</a>
+            <a href="#">Неоновые вывески</a>
+            <a href="#">Таблички</a>
+            <a href="#">Корзина</a>
+          </div>
+        </div>
+
+        <!-- Калькулятор без дропа -->
+        <a class="nav__link" href="#calculator">Калькулятор</a>
+
+        <!-- Поддержка с выпадающим -->
+        <div class="nav__item">
+          <button class="nav__link">Поддержка</button>
+          <div class="dropdown">
+            <a href="#">Индивидуальный заказ</a>
+            <a href="#">Мэнеджер</a>
+            <a href="#">Наши офисы</a>
+            <a href="#">FaQ</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Hero -->
+   <section class="hero" id="hero">
+        <div class="hero__media">
+      <img src="Media/Logos/Logo_caption.svg" alt="Logo_armada" />
+    </div>
+    <div class="hero__content">
+      <div class="hero__cta">
+        <a class="btn btn--primary">рассчитать стоимость проекта</a>  
+      </div>
+    </div>
+   
+  </section>
+
+  <!-- Feature marquee -->
+  <section class="marquee" aria-label="Ключевые фичи">
+  <div class="marquee__wrapper">
+    <div class="marquee__content">
+      <span>Световые буквы</span>
+      <span>Лайтбоксы</span>
+      <span>Неон</span>
+      <span>Таблички</span>
+      <span>Любая сложность</span>
+      <span>Индивидуальный подход</span>
+      
+      <span>Световые буквы</span>
+      <span>Лайтбоксы</span>
+      <span>Неон</span>
+      <span>Таблички</span>
+      <span>Любая сложность</span>
+      <span>Индивидуальный подход</span>
+
+      <span>Световые буквы</span>
+      <span>Лайтбоксы</span>
+      <span>Неон</span>
+      <span>Таблички</span>
+      <span>Любая сложность</span>
+      <span>Индивидуальный подход</span>
+    </div>
+  </div>
+</section>
+
+  <!-- Product grid -->
+  <main class="grid" id="store" aria-label="Витрина">
+    <article class="tile tile--dark"> 
+      <div class="product">
+       <h3>Световые Буквы</h3>
+        <img src="Media/Intro/Светобуквы.PNG" alt="MacBook Pro" />
+        <p>Самые яркие.</p>
+      </div>
+     </article> 
+    <article class="tile">
+      <div class="product">
+       <h3>Лайтбоксы</h3>
+        <p>Свет простоты.</p>
+        <img src="Media/Intro/Лайтбоксы.PNG" alt="MacBook Pro" />
+      </div>
+    </article>
+    <article class="tile">
+      <div class="product">
+       <h3>Неоновые вывески</h3>
+        <p>Для вайба.</p>
+        <img src="Media/Intro/Неон.PNG" alt="MacBook Pro" />
+      </div>
+    </article>
+    <article class="tile tile--image">
+      <div class="product">
+       <h3>Таблички</h3>
+        <img src="Media/Intro/Таблички.PNG" alt="MacBook Pro" />
+      </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- Info section -->
+  <section class="split" id="learn">
+    <div class="split__copy">
+      <h3>Наружная реклама</h3>
+      <p>Это реклама, размещаемая на улице. Она включает в себя различные виды конструкций, такие как билборды, вывески, световые короба и другие. Компания "АРМАДА" является одним из лидеров в производстве наружной рекламы. Мы предлагаем широкий ассортимент продукции, высокое качество и индивидуальный подход к каждому клиенту.</p>
+      <a href="#" class="btn btn--inline">Смотреть гайдлайны &rsaquo;</a>
+    </div>
+    <div class="split__media">
+      <div class="card">
+        <h4>Металлоконструкции</h4>
+        <p>Мы гарантируем качество нашей продукции и предлагаем индивидуальные решения, которые учитывают все требования и пожелания заказчика.</p>
+      </div>
+      <div class="card">
+        <h4>АРМАДА</h4>
+        <p>это ваш надежный партнер в создании эффективной наружной рекламы!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="support">
+    <div class="legal">
+      <p>Copyright © 2025 ARMADA. Все права защищены.</p>
+      <nav class="legal__links">
+        <a href="#">Конфиденциальность</a>
+        <a href="#">Условия</a>
+        <a href="#">Карта сайта</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
