@@ -4,9 +4,7 @@ let lastY = 0;
 addEventListener('scroll', () => {
   const y = scrollY;
   header.dataset.scrolled = y > 8;
-  // маленький хедер-«толчок» при скролле вниз
-  header.style.transform = y > lastY && y > 120 ? 'translateY(-8px)' : 'translateY(0)';
-  lastY = y;
+
 });
 
 // Мобильное меню

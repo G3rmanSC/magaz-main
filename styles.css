@@ -58,7 +58,7 @@ body {
 
 /* Логотип */
 .nav__logo img {
-  height: 24px; /* регулируешь под свой логотип */
+  height: 24px; 
   width: auto;
   display: block;
 }
