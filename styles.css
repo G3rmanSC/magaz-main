@@ -32,7 +32,9 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Header */
+/* ==================
+   Header
+================== */
 .site-header {
   position: sticky;
   top: 0;
@@ -56,14 +58,12 @@ body {
   align-items: center;
 }
 
-/* Логотип */
 .nav__logo img {
   height: 24px; 
   width: auto;
   display: block;
 }
 
-/* Навигация */
 .nav__links {
   display: flex;
   gap: 28px;
@@ -79,12 +79,12 @@ body {
   cursor: pointer;
   padding: 10px 6px;
   transition: color .2s ease;
+  text-decoration: none;
 }
 .nav__link:hover {
   color: var(--fg);
 }
 
-/* Выпадающие меню */
 .nav__item {
   position: relative;
 }
@@ -125,7 +125,9 @@ body {
   transform: translateX(-50%) translateY(0);
 }
 
-/* Hero */
+/* ==================
+   Hero
+================== */
 .hero {
   display: flex;
   flex-direction: column;
@@ -136,24 +138,20 @@ body {
   padding: clamp(60px, 12vw, 160px) var(--pad) 80px;
   gap: 32px;
 }
-
 .hero__subtitle {
   font-size: clamp(16px, 2.5vw, 24px);
   color: var(--muted);
   margin: 8px 0 24px;
 }
-
 .hero__cta {
   display: flex;
   gap: 16px;
   justify-content: center;
 }
-
 .hero__media {
   margin-top: 40px;
   width: 100%;
 }
-
 .hero__media img {
   display: block;
   width: 590px;
@@ -161,60 +159,53 @@ body {
   margin: 0 auto;
   box-shadow: 0 20px 60px color-mix(in oklab, #000, transparent 70%);
 }
+
 .btn--primary {
-  background: transparent; /* кнопка прозрачная */
-  color: var(--fg); /* текст в цвет шрифта */
+  background: transparent;
+  color: var(--fg);
   border: 2px solid transparent;
   border-radius: 2px;
   padding: 4px 100px;
   font-size: 17px;
   font-weight: 500;
   cursor: pointer;
-
- 
 }
-
 .btn--primary:hover {
   color: #000000;
   background-image: linear-gradient(#ffffff, #ffffff), 
                     linear-gradient(90deg, #ffffff, #5c5c5c, #ffffff);
 }
 
-/* Marquee */
+/* ==================
+   Marquee
+================== */
 .marquee {
   overflow: hidden;
   border-block: 1px solid color-mix(in oklab, var(--fg), transparent 90%);
 }
-
 .marquee__wrapper {
   display: block;
   position: relative;
 }
-
 .marquee__content {
   display: flex;
   gap: 40px;
   white-space: nowrap;
-  /* Старт за пределами видимой области справа */
   transform: translateX(100%);
   animation: marquee 60s linear infinite;
 }
-
 .marquee__content span {
   font-size: 15px;
   color: var(--muted);
 }
-
 @keyframes marquee {
-  0% {
-    transform: translateX(100%); /* старт справа */
-  }
-  100% {
-    transform: translateX(-100%); /* плавный уход влево */
-  }
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
 }
 
-/* Grid */
+/* ==================
+   Grid / Tiles
+================== */
 .grid {
   max-width: 1180px; margin: 0 auto; padding: 40px var(--pad) 80px;
   display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px;
@@ -236,52 +227,9 @@ body {
 .tile p { margin: 0 0 10px; color: var(--muted); }
 .tile .link { color: var(--accent); font-weight: 600; text-decoration: none; }
 
-.product {
-  position: relative;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  overflow: hidden;
-  text-align: center;
-  height: 250px; /* фикс или auto, смотри по макету */
-  cursor: pointer;
-}
-
-/* Контент по центру */
-.product__content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
-  font-weight: 600;
-  transition: opacity .4s ease;
-  z-index: 2;
-}
-
-/* Картинка */
-.product img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  opacity: 0;
-  transform: scale(1.1);
-  transition: opacity .5s ease, transform .5s ease;
-  z-index: 1;
-}
-
-/* Наведение */
-.product:hover .product__content {
-  opacity: 0;
-}
-
-.product:hover img {
-  opacity: 1;
-  transform: scale(1);
-}
-/* Split section */
+/* ==================
+   Split Section
+================== */
 .split {
   max-width: 1180px; margin: 0 auto 80px; padding: 0 var(--pad);
   display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: start;
@@ -293,15 +241,131 @@ body {
   box-shadow: 0 1px 0 color-mix(in oklab, var(--fg), transparent 90%);
 }
 
-/* Footer */
+/* ==================
+   Shop Page
+================== */
+.shop-hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+.shop-hero h1 {
+  font-size: clamp(32px, 6vw, 56px);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.shop-hero p {
+  font-size: 18px;
+  color: var(--muted);
+}
+
+/* Категории */
+.shop-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 60px var(--pad);
+}
+.shop-cat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 40px 20px;
+  border-radius: 20px;
+  background: #000;
+  transition: transform .4s ease, box-shadow .4s ease, background .4s ease;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+.shop-cat img {
+  max-width: 180px;
+  margin-bottom: 24px;
+  object-fit: contain;
+  transition: transform .4s ease;
+}
+.shop-cat h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  transition: color .3s ease;
+}
+.shop-cat:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+  background: #fff;
+}
+.shop-cat:hover h2 { color: var(--accent); }
+.shop-cat:hover img { transform: scale(1.08); }
+
+/* Сетка продуктов */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 40px var(--pad);
+}
+.product {
+  position: relative;
+  background: var(--tile);
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+.product:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+}
+.product__content {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--fg);
+  z-index: 2;
+  transition: opacity .3s ease;
+  text-align: center;
+  padding: 10px;
+}
+.product img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transform: scale(1.1);
+  transition: opacity .4s ease, transform .4s ease;
+}
+.product:hover .product__content { opacity: 0; }
+.product:hover img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* ==================
+   Footer
+================== */
 .site-footer {
-  padding: 32px var(--pad) 60px; color: var(--muted);
+  padding: 32px var(--pad) 60px;
+  color: var(--muted);
   border-top: 1px solid color-mix(in oklab, var(--fg), transparent 90%);
 }
-.legal { max-width: 1180px; margin: 0 auto; display: grid; gap: 8px; }
-.legal__links { display: flex; gap: 18px; flex-wrap: wrap; }
+.legal {
+  max-width: 1180px; margin: 0 auto; display: grid; gap: 8px;
+}
+.legal__links {
+  display: flex; gap: 18px; flex-wrap: wrap;
+}
 
-/* Responsive */
+/* ==================
+   Responsive
+================== */
 @media (max-width: 980px) {
   .hero { grid-template-columns: 1fr; }
   .grid { grid-template-columns: repeat(6, 1fr); }
@@ -309,7 +373,6 @@ body {
 }
 @media (max-width: 760px) {
   .nav { grid-template-columns: 40px 1fr 40px; }
-  .nav__menu { display: inline-block; }
   .nav__links {
     position: fixed; inset: 56px 10px auto 10px; display: none; flex-direction: column;
     background: color-mix(in oklab, var(--bg), transparent 10%);
