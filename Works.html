@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наши работы</title>
+  <link rel="icon" type="image/png" href="Media/Logos/Icon.png" />
+  <style>
+    :root {
+      --bg: #fbfbfd;
+      --fg: #1d1d1f;
+      --muted: #6e6e73;
+      --accent: #0071e3;
+    }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.5;
+    }
+
+    header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+    header h1 {
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 700;
+      margin: 0 0 16px;
+    }
+    header p {
+      font-size: 18px;
+      color: var(--muted);
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* Hero-блоки */
+    .hero-block {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      max-width: 1180px;
+      margin: 0 auto 100px;
+      padding: 0 20px;
+      gap: 40px;
+    }
+    .hero-block img {
+      flex: 1 1 400px;
+      border-radius: 40px;
+      max-width: 400px;
+      height: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    }
+    .hero-text {
+      flex: 1 1 400px;
+    }
+    .hero-text h2 {
+      font-size: 36px;
+      margin-bottom: 16px;
+    }
+    .hero-text p {
+      font-size: 17px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Галерея для остальных */
+    .gallery {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      object-fit: cover;
+      transition: transform .3s ease;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid rgba(0,0,0,0.05);
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Наши работы</h1>
+    <p>Мы гордимся каждым проектом. Вот несколько примеров реализованных решений для наших клиентов.</p>
+  </header>
+
+  <!-- Hero-блок 1 -->
+  <section class="hero-block">
+    <img src="Media/Content/ZARINA .png" alt="Работа 1">
+    <div class="hero-text">
+      <h2>Световые буквы для бренда</h2>
+      <p>Яркая вывеска, которая подчёркивает фирменный стиль компании и привлекает внимание даже в вечернее время.</p>
+    </div>
+  </section>
+
+  <!-- Hero-блок 2 -->
+  <section class="hero-block">
+    <div class="hero-text">
+      <h2>Лайтбокс для кафе</h2>
+      <p>Практичное решение: лёгкая конструкция, энергоэффективная подсветка и современный минималистичный дизайн.</p>
+    </div>
+    <img src="Media/Content/MYBODY.png" alt="Работа 2">
+  </section>
+
+  <!-- Hero-блок 3 -->
+  <section class="hero-block">
+    <img src="Media/Content/GAMEZONE.png" alt="Работа 3">
+    <div class="hero-text">
+      <h2>Неоновая вывеска</h2>
+      <p>Креативное оформление интерьера с акцентом на современность и атмосферность пространства.</p>
+    </div>
+  </section>
+
+  <!-- Остальные фото -->
+  <section class="gallery">
+    <img src="Media/Content/DEAD.png" alt="Работа 4">
+    <img src="Media/Content/LOKOMOKO.png" alt="Работа 5">
+    <img src="Media/Content/M2.png" alt="Работа 6">
+    <img src="Media/Content/NSK.png" alt="Работа 7">
+    <img src="Media/Content/URENGUY.png" alt="Работа 8">
+    <img src="Media/Content/LDS.png" alt="Работа 9">
+    <img src="Media/Content/KOFE.png" alt="Работа 10">
+    <img src="Media/Content/FINANCE.png" alt="Работа 11">
+  </section>
+
+  <header>
+    <a class="nav__link" href="index.html">На главную</a>
+    <a class="nav__link" href="index.html">На главную</a>
+  </header>
+
+  <footer>
+    © 2025 Компания «Armada». Все права защищены.
+  </footer>
+</body>
+</html>
